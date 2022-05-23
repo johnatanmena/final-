@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="hoja.css">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+</head>
+<body class="bloque1">
+    <header>
+        <h1>
+            Lista de frutas
+        </h1>
+        <nav>
+            <h3>Listado de frutas</h3>
+            <br>
+            <select name="" id="">
+                <option></option>
+                <option>Manzana</option>
+                <option>Pera</option>
+                <option>Mango</option>
+                <option>Piña</option>
+                <option>Fresa</option>
+                <option>Mora</option>
+                <option>Guayaba</option>
+                <option>Guanabana</option>
+                <option>Aguacate</option>
+                <option>Banano</option>
+            </select>
+            <section>
+                <h3>Seleccione un color</h3>
+                <select name="" id="select">
+                    <option value=""></option>
+                    <option value="1">Primer color</option>
+                    <option value="2">Segundo color</option>
+                </select>
+                <button id="boton">
+                    Aplicar
+                </button>
+            </section>
+        </nav>
+    </header>
+</body>
+</html>
+<script>
+     const boton = document.querySelector("#boton");
+                          boton.addEventListener('click', async() => {
+let x = document.getElementById("select").value;
+let elemento = document.body;
+try {
+	if(x == "1"){
+	let g = elemento.style.backgroundColor = "#7AFF33";
+console.log("Hola")
+}
+if(x == "2"){
+	let g = elemento.style.backgroundColor = "#33FF9C";
+console.log("Hola")
+}
+} catch (error) {
+	console.log(error)
+}
+						  })
+</script>

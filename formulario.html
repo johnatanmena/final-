@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="hoja.css">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body class="bloque1">
+   
+    <header>
+       <nav >
+      <h1>
+          Formulario de datos
+      </h1>
+  
+        <form >
+        <h4>Digite su nombre completo</h4>
+        <input type="text" id="nombre" required>
+        <br>
+        <br>
+        <h4>Digite su email</h4>
+        <input type="email" id="email" required>
+        <br>
+        <br>
+        <h4>Asunto</h4>
+        <input type="text" id="asunto" required>
+        <br>
+        <br>
+        <h4>Mensaje</h4>
+        <input type="text" id="mensaje" required>
+        <br>
+        <br>
+        <h4>Resetear</h4>
+        <input type="reset" value="Reset">
+        <br>
+        <br>
+        <button id="boton">
+            Enviar datos
+        </button>
+        <br>
+        <br>
+    </form>
+        <h3>Se enviaron los siguientes datos</h3>
+        <div id="pantalla">
+        </div>
+  
+    </header>
+</body>
+</nav>
+</html>
+<script>
+    let x = document.querySelector("#boton");
+    x.addEventListener("click", async()=>{
+        let x1 = document.getElementById("nombre").value;
+        let x2 = document.getElementById("email").value;
+        let x3 = document.getElementById("asunto").value;
+        let x4 = document.getElementById("mensaje").value;
+        let pantalla = document.getElementById("pantalla");
+        pantalla.innerHTML =x1+" "+" "+x2+" "+" "+x3+" "+" "+x4+" ";
+        alert(x1+" "+" "+x2+" "+" "+x3+" "+" "+x4+" ")
+
+        console.log(x1+" "+" "+x2+" "+" "+x3+" "+" "+x4+" ")
+    })
+</script>
